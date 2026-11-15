@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>معدّلي | حاسبة المعدل التراكمي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>معدّلي</h1>
+      <p>اكتب موادك وساعاتها وتقديراتها، والمعدل يظهر فوراً.</p>
+    </header>
+
+    <section class="result" aria-live="polite">
+      <div class="gpa-block">
+        <span class="gpa-label">المعدل التراكمي</span>
+        <strong id="gpa">—</strong>
+        <span id="rank" class="rank"></span>
+      </div>
+      <dl class="stats">
+        <div>
+          <dt>مجموع الساعات</dt>
+          <dd id="totalHours">0</dd>
+        </div>
+        <div>
+          <dt>مجموع النقاط</dt>
+          <dd id="totalPoints">0</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="courses-section">
+      <div class="head-row" aria-hidden="true">
+        <span>المادة</span>
+        <span>الساعات</span>
+        <span>التقدير</span>
+        <span></span>
+      </div>
+
+      <div id="courses"></div>
+
+      <div class="actions">
+        <button type="button" id="addBtn" class="btn primary">إضافة مادة</button>
+        <button type="button" id="resetBtn" class="btn">مسح الكل</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
