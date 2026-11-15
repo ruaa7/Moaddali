@@ -1,1 +1,204 @@
-/* GPA calculator styles */
+:root {
+  --paper: #eef1f6;
+  --card: #ffffff;
+  --ink: #14213d;
+  --muted: #5b6678;
+  --line: #d3d9e4;
+  --mark: #ffd23f;
+  --danger: #b3261e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 16px 56px;
+}
+
+
+.top h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.top p {
+  margin: 4px 0 24px;
+  color: var(--muted);
+}
+
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px;
+  margin-bottom: 24px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 14px;
+}
+
+.gpa-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.gpa-label {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+#gpa {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--mark);
+}
+
+.rank {
+  min-height: 1.6em;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+}
+
+.stats dt {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+.courses-section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.head-row,
+.course {
+  display: grid;
+  grid-template-columns: 1fr 90px 130px 40px;
+  gap: 8px;
+  align-items: center;
+}
+
+.head-row {
+  padding: 0 2px 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.course {
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+.btn:focus-visible,
+.remove:focus-visible {
+  outline: 3px solid var(--mark);
+  outline-offset: 1px;
+  border-color: var(--ink);
+}
+
+.remove {
+  height: 40px;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--danger);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background: #fdecea;
+}
+
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+
+@media (max-width: 520px) {
+  .head-row {
+    display: none;
+  }
+
+  .course {
+    grid-template-columns: 1fr 1fr 40px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .course .name {
+    grid-column: 1 / 4;
+  }
+
+  #gpa {
+    font-size: 3.2rem;
+  }
+}
+
